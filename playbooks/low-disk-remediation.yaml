@@ -4,4 +4,4 @@
   tasks:
     - name: Debug information
       ansible.builtin.debug:
-        msg: "Events: '{{ ansible_eda.event }}'
+        var: ansible_eda.event
