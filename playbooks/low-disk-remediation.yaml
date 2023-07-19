@@ -1,7 +1,14 @@
 - name: Low disk space remediation
-  hosts: localhost
-  connection: local
+  hosts: all
   tasks:
     - name: Debug information
       ansible.builtin.debug:
         var: ansible_eda.event
+      when: ansible_eda is defined
+
+    - name: Delete tmp file
+      command: rm -f /tmp/test
+      
+      
+
+
