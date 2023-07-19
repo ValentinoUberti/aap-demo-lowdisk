@@ -1,5 +1,5 @@
 - name: Low disk space remediation
-  hosts: all
+  hosts: servers
   tasks:
     - name: Debug information
       ansible.builtin.debug:
