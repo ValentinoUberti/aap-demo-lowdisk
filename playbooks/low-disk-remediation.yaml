@@ -1,0 +1,7 @@
+- name: Low disk space remediation
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Debug information
+      ansible.builtin.debug:
+        msg: "Events: '{{ ansible_eda.event }}'
